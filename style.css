@@ -1,17 +1,22 @@
 body {
-    background: #ccc;
+    background: #1A1A26;
     font-family: Verdana;
     max-width: 900px;
     margin: auto;
 }
 
 .photo{
+    max-width: 250px;
     border-radius: 50%;
-    border: 1px solid #000;
+    margin-left: 300px;
 }
 
 #title, .subtitle, .post_title {
-    color: blue;
+    color: #fff;
+    border: 1px solid #000;
+    text-align: center;
+    background: #363F73;
+    border-radius: 20px;
 }
 
 #title {
@@ -32,7 +37,8 @@ a {
 }
 
 .post {
-    background: #fff;
+    color: #fff;
+    background: #2A438C;
     padding: 15px;
     border: 3px solid #000;
     margin-bottom: 15px;
@@ -49,7 +55,7 @@ a {
 .post_image {
     margin-bottom: 15px;
     border-radius: 20%;
-    border: 2px solid #8CFA41;
+    border: 2px solid #000;
     width: 100%;
 }
 
@@ -61,4 +67,14 @@ a {
 .contact_list li a {
     color: blue;
     text-decoration: none;
+}
+
+.construction {
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+
+.image_footer {
+    margin-left: 50px;
 }
