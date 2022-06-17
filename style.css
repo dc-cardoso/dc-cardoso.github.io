@@ -78,3 +78,7 @@ a {
 .image_footer {
     margin-left: 50px;
 }
+
+.pilars_list {
+    list-style-type: &#10040;
+}
