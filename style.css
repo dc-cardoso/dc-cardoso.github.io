@@ -1,18 +1,25 @@
 body {
     background: #00457A;
     font-family: Verdana;
-    max-width: 75%;
+    max-width: 90%;
     margin: auto;
 }
 
-.container{
+
+.top{
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    margin: 0;
+    justify-content: space-between;
+}
+
+.contato-top{
+    margin-top: 2%;
 }
 
 .photo{
-    max-width: 30%;
+    width: 30%;
+    max-width: 150px;
+    margin-top: 4%;
 }
 
 #title, .subtitle, .post_title {
@@ -85,4 +92,9 @@ a {
 
 .pilars_list {
     list-style-type: decimal;
+}
+
+.whatsapp{
+    width: 5%;
+    max-width: 1000px;
 }
