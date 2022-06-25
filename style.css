@@ -1,32 +1,57 @@
 body {
-    background: #00457A;
+    background: white;
     font-family: Verdana;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
 }
 
+.container{
+    max-width: 90%;
+    margin-left: 5%;
+}
 
 .top{
+    background-color: rgb(240, 240, 240);
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
+.text-whatsapp{
+    margin-top: 5px;
+    margin-right: 3px;
+}
+
+
+.top-contact{
+    text-align: center;
+    font-size: xx-small;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 125px;
+    height: 20px;
+}
+
 .contato-top{
-    margin-top: 2%;
+    margin-top: 10px;
+    width: 500px;
 }
 
 .photo{
     width: 30%;
-    max-width: 150px;
-    margin-top: 4%;
+    max-width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 #title, .subtitle, .post_title {
     color: #fff;
     border: 1px solid #000;
     text-align: center;
-    background: #363F73;
+    background: rgb(227, 227, 227);
     border-radius: 20px;
 }
 
