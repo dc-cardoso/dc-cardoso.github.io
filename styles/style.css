@@ -84,10 +84,18 @@ header .container {
 }
 
 /* ===== LOGO ===== */
+/* CSS */
 .logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
+  width: 150px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
 }
 
 .logo img {
