@@ -55,7 +55,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: white;
+    background: #F4F4F4;
     z-index: 1000;
     height: 80px; /* Altura reduzida */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -70,6 +70,15 @@ header .container {
     height: 100%;
     padding: 0 20px; /* Adicionado padding lateral */
 }
+
+/* Garante que a cor não mude no modo escuro */
+@media (prefers-color-scheme: dark) {
+    header {
+        background: #F4F4F4;
+        color: #000; /* se necessário, para garantir contraste */
+    }
+}
+
 
 /* ===== LOGO CORRIGIDA ===== */
 .logo {
