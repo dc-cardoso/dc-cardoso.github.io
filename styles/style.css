@@ -91,7 +91,7 @@ header .container {
 }
 
 .logo img {
-    height: 100px;
+    height: 45px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
