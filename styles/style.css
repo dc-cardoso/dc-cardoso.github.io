@@ -1,5 +1,6 @@
 /* Reset e Estilos Gerais */
 :root {
+    
     --primary: #2E4F4F;
     --secondary: #CBE4DE;
     --accent: #FFD700;
@@ -7,6 +8,17 @@
     --light: #FFFFFF;
     --dark: #1A1A1A;
 }
+@media (prefers-color-scheme: dark) {
+    body, header, nav, footer {
+        background-color: #F4F4F4 !important;
+        color: #000 !important;
+    }
+
+    nav ul li a {
+        color: #333 !important;
+    }
+}
+
 
 * {
     margin: 0;
@@ -88,29 +100,28 @@ header .container {
 }
 
 .logo img {
-    height: 40px; /* Altura fixa (não usa max-height) */
+    height: 45px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
-/* Desktop */
 @media (min-width: 769px) {
     .logo img {
-        height: 50px; /* Aumento controlado */
+        height: 55px;
     }
 }
 
-/* Telas grandes */
 @media (min-width: 1200px) {
     .logo img {
-        height: 60px; /* Tamanho máximo */
+        height: 60px;
     }
 }
 
 .logo img:hover {
     transform: scale(1.05);
 }
+
 
 /* Menu */
 nav ul {
