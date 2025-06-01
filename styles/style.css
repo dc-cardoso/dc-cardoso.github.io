@@ -49,7 +49,7 @@ h1, h2, h3 {
     background: #1E3A3A;
 }
 
-/* Header */
+/* ===== HEADER CORRIGIDO ===== */
 header {
     position: fixed;
     top: 0;
@@ -57,58 +57,69 @@ header {
     width: 100%;
     background: white;
     z-index: 1000;
-    height: 120px; /* Altura total reduzida (ajuste conforme necessidade) */
+    height: 80px; /* Altura reduzida */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
 }
 
 header .container {
-    height: 100%; /* Herda a altura do header */
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0; /* Remove padding interno para ganhar espaço */
+    height: 100%;
+    padding: 0 20px; /* Adicionado padding lateral */
 }
 
-/* --- Estilos para a Logo --- */
-.logo img {
-    max-width: 350px; /* Ajuste conforme necessário */
-    height: auto;
-}
-
-/* (Opcional) Ajuste para telas pequenas */
-@media (max-width: 768px) {
-    .logo img {
-        max-width: 140px; /* Reduz ainda mais em mobile */
-    }
-}
-
+/* ===== LOGO CORRIGIDA ===== */
 .logo {
     display: flex;
     align-items: center;
-    padding: 5px 0; /* Ajuste o padding se necessário */
+    height: 100%;
 }
 
-.logo span {
-    color: var(--accent);
+.logo img {
+    height: 40px; /* Altura fixa (não usa max-height) */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
+/* Desktop */
+@media (min-width: 769px) {
+    .logo img {
+        height: 50px; /* Aumento controlado */
+    }
+}
+
+/* Telas grandes */
+@media (min-width: 1200px) {
+    .logo img {
+        height: 60px; /* Tamanho máximo */
+    }
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Menu */
 nav ul {
     display: flex;
     list-style: none;
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 20px; /* Espaçamento reduzido */
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--text);
     font-weight: 600;
+    font-size: 0.95rem; /* Tamanho ajustado */
     transition: color 0.3s;
+    padding: 5px 0;
 }
 
 nav ul li a:hover {
@@ -124,24 +135,26 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     background: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay preto com 50% de opacidade */
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('../images/banner.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
-    color: var(--light); /* Garanta que --light seja uma cor clara (ex: #FFF) */
-    padding-top: 80px; /* Compensa o header fixo */
+    color: var(--light);
+    padding-top: 80px;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* About Section */
@@ -273,8 +286,16 @@ footer {
     color: var(--accent);
 }
 
-/* Responsividade */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
+    header {
+        height: 70px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
     .menu-toggle {
         display: block;
     }
